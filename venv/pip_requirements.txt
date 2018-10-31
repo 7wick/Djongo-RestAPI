@@ -1,0 +1,11 @@
+djangorestframework
+django
+mongoengine
+djongo
+pymongo
+celery
+Amqp
+Django-rest-swagger
+Redis
+requests
+celerybeat-mongo
