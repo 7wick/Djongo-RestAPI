@@ -8,7 +8,7 @@ logger = logf()
 
 @shared_task(name="length_username_new")                   #gets triggered from serializers
 def new_user_length():
-    time.sleep(25)
+    # time.sleep(25)
     user = UserModel.objects.last()                        #fetches data from DB
     user.length = len(user.username)
     logger.info("{}`s userlength is updated in the database".format (user.username))

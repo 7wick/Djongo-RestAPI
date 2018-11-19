@@ -27,7 +27,7 @@ class UserModelManager(BaseUserManager):
         user = self.create_user(username, password, email)
         user.staff = True
         user.is_superuser = True
-        user.is_active = True
+        # user.is_active = True
         user.save()
         return user
 

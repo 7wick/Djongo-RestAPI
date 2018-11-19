@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     # Apps
     'restAPI',
     'rest_framework',
-
+    'rest_framework.authtoken',
     'django_celery_beat',
     'django_celery_results',
 ]
@@ -54,10 +54,10 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'restAPI.UserModel'
 
 MIDDLEWARE = [
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -146,3 +146,13 @@ CELERY_TIMEZONE = TIME_ZONE
 
 # if DEBUG and os.environ.get('RUN_MAIN', None) != 'true':
 #     LOGGING = {}
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+         'rest_framework.permissions.AllowAny',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
+}

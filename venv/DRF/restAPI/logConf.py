@@ -3,7 +3,7 @@ from logging.handlers import RotatingFileHandler
 
 def logf():
     logger = logging.getLogger('myLogger')
-    logger.setLevel(logging.ERROR)
+    logger.setLevel(logging.DEBUG)
         # logging.basicConfig(filename='log_file.log',
         #                     level=logging.DEBUG,        #filemode='w'
         #                     format='%(asctime)s  %(levelname)s:%(message)s',
@@ -18,7 +18,7 @@ def logf():
         # %(funcName)s Name of function containing the logging call.
         #
         # %(lineno)d Source line number where the logging call was issued (if available).
-    handler = RotatingFileHandler('test_log.log', maxBytes=300, backupCount=10)
+    handler = RotatingFileHandler('test_log.log', maxBytes=500, backupCount=15)
     handler.setFormatter(formatter)
     if (logger.hasHandlers()):
         logger.handlers.clear()

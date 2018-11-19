@@ -1,5 +1,7 @@
+from django.utils.datastructures import MultiValueDictKeyError
 from rest_framework.response import Response
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.decorators import action
 from rest_framework.serializers import ValidationError
@@ -11,14 +13,18 @@ from rest_framework.status import (
 from rest_framework.permissions import(
     AllowAny,
     IsAuthenticated,
+    IsAdminUser,
 )
 from .serializers import (
     UserSerializer,
+    # CreatSerializer,
     LoginSerializer,
-    UpdatePasswordSerializer
+    UpdatePasswordSerializer,
+    APISerializer,
 )
 from restAPI.models import UserModel
-import logging
+# from django.utils.decorators import method_decorator
+# from django.views.decorators.csrf import csrf_exempt
 from restAPI.logConf import logf
 logger = logf()
 
@@ -29,6 +35,54 @@ class UserAuthAPIView(ModelViewSet):
 
     def get_object(self, queryset=None):
         return self.request.user
+
+    @action (methods=['post'], detail=False, serializer_class=UserSerializer, permission_classes=[AllowAny])
+    def createuser(self, request, *args, **kwargs):
+        # # user = UserModel.objects.create(data['username'], data['password'], data['password_confirm'], data['email'])
+        data = request.data
+        serializer = UserSerializer(data=data)
+        if serializer.is_valid():
+            print(serializer.validated_data)
+            serializer.save()
+            return Response("user created successfully", status=HTTP_200_OK)
+        return Response("failed",status=HTTP_400_BAD_REQUEST)
+
+    @action (methods=['post'], detail=False, serializer_class=LoginSerializer, permission_classes=[AllowAny])
+    def login(self, request, *args, **kwargs):
+
+        # print(request.user.is_authenticated)
+        #
+        # if request.user.is_authenticated:
+        #     return Response("Someone is already logged-in", status=HTTP_400_BAD_REQUEST)
+        #     #logout (self.request)
+        # else:
+            data = request.data
+            username = data['username']
+            email = data['email']
+            password = data['password']
+            if not all ((username, email, password)):
+                logger.error ("Credentials missing!")
+                raise ValidationError ("Credentials missing!")
+            try:
+                user = UserModel.objects.get (email=email)
+            except UserModel.DoesNotExist:
+                logger.error ("Such user does not exists")
+                raise ValidationError ('Such user does not exists')
+            if (user.username != username):
+                logger.error ("Credentials incorrect!")
+                raise ValidationError ("Credentials incorrect!")
+            if not user.check_password (password):
+                logger.error ("Password incorrect!")
+                return Response ("Password incorrect!", status=HTTP_400_BAD_REQUEST)
+            login (self.request, user)  # logs-in the user
+            logger.info ("{} has logged-in".format (user.username))
+            return Response ("Login success", status=HTTP_200_OK)
+        # return Response (model_to_dict(user, exclude = ['password','groups',]), status=HTTP_200_OK) #returning data from DB
+
+    @action (methods=['post', 'get'], detail=False, permission_classes=[IsAuthenticated])
+    def logout(self, request, *args, **kwargs):
+        logout(self.request)
+        return Response ("User logged-out successfully", status=HTTP_200_OK)
 
     @action(methods=['post'],detail=False, permission_classes=[IsAuthenticated], serializer_class=UpdatePasswordSerializer)
     def updatepass(self, request, *args, **kwargs):
@@ -54,33 +108,33 @@ class UserAuthAPIView(ModelViewSet):
                 raise ValidationError ("Password mismatch!")
         return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
 
-    @action (methods=['post'], detail=False, serializer_class=LoginSerializer, permission_classes=[AllowAny])
-    def login(self, request, *args, **kwargs):
-        data = request.data
-        username = data['username']
-        email = data['email']
-        password = data['password']
-        if not all((username, email, password)):
-            logger.error("Credentials missing!")
-            raise ValidationError ("Credentials missing!")
-        try:
-            user = UserModel.objects.get(email=email)
-        except UserModel.DoesNotExist:
-            logger.error ("Such user does not exists")
-            raise ValidationError('Such user does not exists')
-        if (user.username != username):
-            logger.error ("Credentials incorrect!")
-            raise ValidationError("Credentials incorrect!")
-        if not user.check_password(password):
-            logger.error ("Password incorrect!")
-            return Response ("Password incorrect!", status=HTTP_400_BAD_REQUEST)
-        login (self.request, user)  #logs-in the user
-        logger.info ("{} has logged-in".format(user.username))
-        return Response (model_to_dict(user, exclude = ['password','groups',]), status=HTTP_200_OK) #returning data from DB
-
     @action (methods=['destroy'], detail=False, permission_classes=[IsAuthenticated])
     def delete(self, request, *args, **kwargs):
-        user = self.get_object ()
+        user = self.request
         user.delete ()
+        logout (user)
         logger.info ("{}`s account has been deleted".format (user.username))
         return Response ('User deleted')
+
+    # @method_decorator (csrf_exempt)
+    @action (methods=['put'], detail=False, serializer_class=APISerializer, permission_classes=[IsAdminUser])
+    def active(self, request):
+        data = request.data
+        print("**************", data)
+        try:
+            user = UserModel.objects.get(username = data['username'])
+            if user is not None:
+                try:
+                    if data.get('active'):
+                        user.active = True
+                except MultiValueDictKeyError:   # or use data.get('active')
+                    user.active = False
+                try:
+                    if data.get('staff'):
+                        user.staff = True
+                except MultiValueDictKeyError:
+                    user.staff = False
+                user.save()
+        except UserModel.DoesNotExist:
+            return Response ("User doesn`t exists!", status=HTTP_400_BAD_REQUEST)
+        return Response ("User data updated successfully!", status=HTTP_200_OK)
