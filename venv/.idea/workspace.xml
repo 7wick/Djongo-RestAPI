@@ -60,14 +60,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="log" value="2" />
-          <entry key="py" value="3027" />
+          <entry key="py" value="3034" />
           <entry key="yml" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Log" value="2" />
-          <entry key="Python" value="3027" />
+          <entry key="Python" value="3034" />
           <entry key="YAML" value="16" />
         </counts>
       </usages-collector>
@@ -78,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
+            <state relative-caret-position="-260">
               <caret line="48" column="29" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="29" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
@@ -127,23 +127,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DRF/restAPI/logConf.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRF/logTesting.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DRF/logTesting.log.1">
-          <provider selected="true" editor-type-id="LogFileEditorProvider" />
         </entry>
       </file>
     </leaf>
@@ -375,12 +365,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18314321" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18314321" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2974428" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2974428" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32974428" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -531,20 +520,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/logTest.log">
+    <entry file="file://$PROJECT_DIR$/DRF/LogTest.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="29" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-            <marker date="1542372708044" expanded="true" signature="392:397" ph="..." />
-            <marker date="1542372708044" expanded="true" signature="797:806" ph="..." />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DRF/DRF/settings.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -576,18 +553,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/restAPI/logConf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DRF/logTesting.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DRF/logTesting.log.1">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-260">
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+            <marker date="1542372708044" expanded="true" signature="392:397" ph="..." />
+            <marker date="1542372708044" expanded="true" signature="797:806" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRF/restAPI/logConf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
