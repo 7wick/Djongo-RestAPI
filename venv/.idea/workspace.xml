@@ -15,18 +15,19 @@
     <session id="1359780276">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="34" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.3" value="4" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.4" value="20" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -43,31 +44,31 @@
           <entry key="9" value="1" />
           <entry key="dir" value="1" />
           <entry key="ini" value="2" />
-          <entry key="log" value="79" />
-          <entry key="py" value="142" />
+          <entry key="log" value="81" />
+          <entry key="py" value="150" />
           <entry key="rdb" value="5" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Log" value="138" />
+          <entry key="Log" value="140" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="142" />
+          <entry key="Python" value="150" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="log" value="2" />
-          <entry key="py" value="3034" />
+          <entry key="py" value="3197" />
           <entry key="yml" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Log" value="2" />
-          <entry key="Python" value="3034" />
+          <entry key="Python" value="3197" />
           <entry key="YAML" value="16" />
         </counts>
       </usages-collector>
@@ -76,24 +77,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/serializers.py">
+        <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-260">
-              <caret line="48" column="29" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="3120">
+              <caret line="153" column="79" selection-start-line="153" selection-start-column="79" selection-end-line="153" selection-end-column="79" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
-                <marker date="1542372708044" expanded="true" signature="392:397" ph="..." />
-                <marker date="1542372708044" expanded="true" signature="797:806" ph="..." />
+                <element signature="e#0#62#0" expanded="true" />
+                <marker date="1542620346736" expanded="true" signature="921:930" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DRF/restAPI/logConf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DRF/DRF/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="58" column="57" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="57" />
+            <state relative-caret-position="330">
+              <caret line="157" column="1" lean-forward="true" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
               <folding>
                 <element signature="e#312#321#0" expanded="true" />
               </folding>
@@ -102,36 +111,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRF/restAPI/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/DRF/LogTest1.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRF/restAPI/views.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/views.py">
+        <entry file="file://$PROJECT_DIR$/DRF/DRF/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+            <state relative-caret-position="432">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
-                <element signature="e#0#62#0" expanded="true" />
+                <element signature="e#627#659#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DRF/restAPI/logConf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -172,13 +163,14 @@
         <option value="$PROJECT_DIR$/Lib/site-packages/pymongo/topology.py" />
         <option value="$PROJECT_DIR$/DRF/restAPI/models.py" />
         <option value="$PROJECT_DIR$/DRF/restAPI/api/serializers.py" />
-        <option value="$PROJECT_DIR$/DRF/DRF/settings.py" />
+        <option value="$PROJECT_DIR$/DRF/DRF/urls.py" />
         <option value="$PROJECT_DIR$/DRF/restAPI/api/views.py" />
         <option value="$PROJECT_DIR$/DRF/restAPI/logConf.py" />
+        <option value="$PROJECT_DIR$/DRF/DRF/settings.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="802" />
     <option name="y" value="219" />
     <option name="width" value="725" />
@@ -190,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,6 +224,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,7 +381,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DRF/log_file1.log.10" />
     <entry file="file://$PROJECT_DIR$/DRF/log_file1.log.5" />
     <entry file="file://$PROJECT_DIR$/DRF/log_file1.log.1" />
     <entry file="file://$PROJECT_DIR$/DRF/log_file1.log.3" />
@@ -490,29 +481,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/python-docs-hello-world/application.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/DRF/restAPI/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/DRF/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lib/site-packages/pip/_vendor/lockfile/pidlockfile.py" />
     <entry file="file://$PROJECT_DIR$/DRF/log_testss.log" />
     <entry file="file://$PROJECT_DIR$/DRF/restAPI/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/log_test_1.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="72">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DRF/log_test_1.log" />
     <entry file="file://$PROJECT_DIR$/DRF/restAPI/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -520,16 +497,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/LogTest.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    <entry file="file://$PROJECT_DIR$/DRF/logTesting.log" />
+    <entry file="file://$PROJECT_DIR$/DRF/logTesting.log.1" />
+    <entry file="file://$PROJECT_DIR$/DRF/restAPI/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/DRF/settings.py">
+    <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="58" column="57" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="57" />
-          <folding>
-            <element signature="e#312#321#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRF/LogTest.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="72">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -540,41 +523,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/restAPI/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+        <state relative-caret-position="3120">
+          <caret line="153" column="79" selection-start-line="153" selection-start-column="79" selection-end-line="153" selection-end-column="79" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
+            <marker date="1542620346736" expanded="true" signature="921:930" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/logTesting.log">
+    <entry file="file://$USER_HOME$/Desktop/python-docs-hello-world/application.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRF/LogTest1.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/logTesting.log.1">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DRF/restAPI/api/serializers.py">
+    <entry file="file://$PROJECT_DIR$/DRF/DRF/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-260">
-          <caret line="48" column="29" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="432">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
-            <marker date="1542372708044" expanded="true" signature="392:397" ph="..." />
-            <marker date="1542372708044" expanded="true" signature="797:806" ph="..." />
+            <element signature="e#627#659#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DRF/restAPI/logConf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="153">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRF/DRF/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="157" column="1" lean-forward="true" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+          <folding>
+            <element signature="e#312#321#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

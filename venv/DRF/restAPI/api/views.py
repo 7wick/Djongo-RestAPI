@@ -1,7 +1,6 @@
 from django.utils.datastructures import MultiValueDictKeyError
 from rest_framework.response import Response
 from django.contrib.auth import login, logout
-from django.contrib.auth.decorators import login_required
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.decorators import action
 from rest_framework.serializers import ValidationError
@@ -17,14 +16,11 @@ from rest_framework.permissions import(
 )
 from .serializers import (
     UserSerializer,
-    # CreatSerializer,
     LoginSerializer,
     UpdatePasswordSerializer,
     APISerializer,
 )
 from restAPI.models import UserModel
-# from django.utils.decorators import method_decorator
-# from django.views.decorators.csrf import csrf_exempt
 from restAPI.logConf import logf
 logger = logf()
 
@@ -34,11 +30,31 @@ class UserAuthAPIView(ModelViewSet):
     serializer_class = UserSerializer
 
     def get_object(self, queryset=None):
-        return self.request.user
+         return self.request.user
+        # if queryset is None:
+        #     queryset = self.get_queryset ()
+        #
+        #     # Next, try looking up by primary key.
+        # # pk = self.kwargs.get (self.id)
+        # if id is not None:
+        #     queryset = queryset.filter (id=id)
+        #
+        # # If none of those are defined, it's an error.
+        # if id is None:
+        #     raise AttributeError (
+        #         "Generic detail view %s must be called with either an object "
+        #         "pk or a slug in the URLconf." % self.__class__.__name__
+        #     )
+        #
+        # try:
+        #     # Get the single item from the filtered queryset
+        #     obj = queryset.get ()
+        # except queryset.model.DoesNotExist:
+        #     raise ValidationError("No %(verbose_name)s found matching the query")
+        # return obj
 
     @action (methods=['post'], detail=False, serializer_class=UserSerializer, permission_classes=[AllowAny])
     def createuser(self, request, *args, **kwargs):
-        # # user = UserModel.objects.create(data['username'], data['password'], data['password_confirm'], data['email'])
         data = request.data
         serializer = UserSerializer(data=data)
         if serializer.is_valid():
@@ -116,11 +132,9 @@ class UserAuthAPIView(ModelViewSet):
         logger.info ("{}`s account has been deleted".format (user.username))
         return Response ('User deleted')
 
-    # @method_decorator (csrf_exempt)
     @action (methods=['put'], detail=False, serializer_class=APISerializer, permission_classes=[IsAdminUser])
     def active(self, request):
         data = request.data
-        print("**************", data)
         try:
             user = UserModel.objects.get(username = data['username'])
             if user is not None:

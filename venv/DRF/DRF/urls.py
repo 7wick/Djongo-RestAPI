@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
 
+# from restAPI.api import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
+    # path('api/<int:pk>/$', views.UserAuthAPIView.as_view({'get': 'retrieve'})),
     url(r'^api/', include('restAPI.urls')),
 ]

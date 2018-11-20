@@ -18,7 +18,7 @@ def logf():
         # %(funcName)s Name of function containing the logging call.
         #
         # %(lineno)d Source line number where the logging call was issued (if available).
-    handler = RotatingFileHandler('LogTest.log', maxBytes=500, backupCount=15)
+    handler = RotatingFileHandler('LogTest1.log', maxBytes=500, backupCount=15)
     handler.setFormatter(formatter)
     if (logger.hasHandlers()):
         logger.handlers.clear()

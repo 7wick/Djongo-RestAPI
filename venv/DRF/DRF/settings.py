@@ -156,3 +156,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     )
 }
+
+SESSION_COOKIE_AGE = 100   #session expires in n seconds
